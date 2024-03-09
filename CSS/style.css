@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #595DB8;
+}
+.sortable-list {
+    background-color: #fff;
+    width: 445px;
+    padding: 30px 35px 20px ;
+    border-radius: 6px;
+
+}
+.sortable-list .item {
+    list-style: none;
+    display: flex;
+    border: 1px solid #ccc;
+    margin-bottom: 11px;
+    padding: 10px 13px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+.item .details{
+    display: flex;
+    align-items: center;
+}
+.item .details img {
+    width: 43px;
+    height: 43px;
+    object-fit: cover;
+    margin-right: 12px;
+    border-radius: 50%;
+
+}
+.item .details span {
+    font-size: 1.13rem;
+}
+.item i {
+    font-size: 1.13rem;
+    color: #474747;
+}
+.item.dragging::where(.details, i){
+    opacity: 0;
+}
